@@ -2,31 +2,12 @@ span.item {
 	font-weight: bold;
 }
 
-input {
-  position: fixed;
-}
-
-li img{
+li img {
 	width: 200px;
 }
 
-ng-table.playlists {
-	width: 200px;
-}
-
-ng-table.playlist {
-	float: left;
-	padding: 10px;
-	cursor: pointer;
-	max-width: 220px;
-}
 .playlists .playlists {
 	margin-top: 10px;
-}
-
-input {
-	position: fixed;
-  left: 15px;
 }
 
 .playlist span {
@@ -37,10 +18,31 @@ input {
 }
 
 .playlist-nav {
-	width: 256px;
+	width: 20%;
 	float: left;
 	overflow-y: scroll;
 	height: 100vh;
 	position: fixed;
 	left: 0;
 }
+
+.mat-input-element.mat-form-field-autofill-control {
+    width: 20%;
+    float: left;
+}
+
+.example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+}
+  

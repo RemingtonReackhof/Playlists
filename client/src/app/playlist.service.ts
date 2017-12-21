@@ -2,14 +2,24 @@ import { Injectable } from '@angular/core';
 import { RequestOptions, Headers, Http } from '@angular/http';
 
 import {environment} from '../environments/environment';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class PlaylistService {
+  static selectedPlaylist$: Subject<any> = new Subject();
   private playlistsUrl = 'playlists';
   private playlistTracksUrl = 'playlist-tracks';
   private audioFeaturesUrl = 'audio-features';
 
   constructor(private http: Http) { }
+
+  setSelectedPlaylist(playlist) {
+    PlaylistService.selectedPlaylist$.next(playlist);
+  }
+
+  getSelectedPlaylist(): any {
+    return PlaylistService.selectedPlaylist$;
+  }
 
   getPlaylists(): Promise<any[]> {
     return this.http.get(environment.apiUrl + this.playlistsUrl)
@@ -18,11 +28,6 @@ export class PlaylistService {
       .catch(this.handleError);
   }
 
-  getPlaylist(id: string) {
-    return this.getPlaylists()
-        .then(playlists => playlists.filter(
-          playlist => playlist.id === id)[0]);
-  }
   getTracks(id: string, owner: string) {
     return this.http.get(environment.apiUrl + this.playlistTracksUrl + '?playlist=' + id + '&owner=' + owner)
       .toPromise()

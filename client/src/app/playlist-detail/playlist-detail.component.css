@@ -3,7 +3,7 @@ img {
 }
 
 .playlist-detail {
-	margin-left: 187px;
+	margin-left: 20%;
 	margin-top: 18px;
 	animation: fadein 1s;
   -moz-animation: fadein 1s; /* Firefox */

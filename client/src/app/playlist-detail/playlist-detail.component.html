@@ -1,0 +1,35 @@
+<div class="playlist-detail" *ngIf="playlist && loaded">
+	<img src={{playlist.images[0].url}}>
+  <h2 class="playlist-title">{{playlist.name}}</h2>
+  
+  <div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+  <mat-table #table2 [dataSource]="dataSource" matSort>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Artist Column -->
+    <ng-container matColumnDef="artist">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Artist </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.artist}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectRow(row)"></mat-row>
+  </mat-table>
+</div>
+
+<div *ngIf="!loaded" class="load-wrapp">
+    <div class="load-9">
+        <div class="spinner">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+         </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="header">
+	<h1>{{title}}</h1>
+	<nav class="clearfix">
+		<ul class="primary-nav">
+			<li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+			<li><a [routerLink]="['/artists']">Artists</a></li>
+			<li><a [routerLink]="['/user']">User</a></li>
+			<li><a [routerLink]="['/playlists']">Playlists</a></li>
+		</ul>
+	</nav>
+</div>
+<div class="router-outlet">
+	<router-outlet></router-outlet>
+</div>

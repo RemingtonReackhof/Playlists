@@ -1,0 +1,46 @@
+span.item {
+	font-weight: bold;
+}
+
+input {
+  position: fixed;
+}
+
+li img{
+	width: 200px;
+}
+
+ng-table.playlists {
+	width: 200px;
+}
+
+ng-table.playlist {
+	float: left;
+	padding: 10px;
+	cursor: pointer;
+	max-width: 220px;
+}
+.playlists .playlists {
+	margin-top: 10px;
+}
+
+input {
+	position: fixed;
+  left: 15px;
+}
+
+.playlist span {
+	display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.playlist-nav {
+	width: 256px;
+	float: left;
+	overflow-y: scroll;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+}

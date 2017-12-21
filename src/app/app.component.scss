@@ -1,0 +1,50 @@
+h1 {
+	color: #1ed760;
+	z-index: 1;
+	position: fixed;
+	top: 6px;
+	margin: 0 1.8%;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+nav {
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+nav li a {
+  color: #88898c;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.15s all linear;
+/*  border-top:  5px solid transparent;
+  border-bottom: 5px solid transparent;*/
+}
+nav li a:hover,
+nav li a.router-link-active {
+  color: #dfe0e6;
+}
+ul {
+	margin: 0;
+}
+.primary-nav {
+	float: right;
+  margin-right: 2.5em;
+}
+
+.primary-nav > li {
+	float: left;
+}
+
+.primary-nav > li > a {
+	padding: 15% 0;
+	width: 130px;
+	float: left;
+}

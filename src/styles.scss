@@ -1,0 +1,219 @@
+/* Master Styles */
+* {
+    font-family: Montserrat, Helvetica, sans-serif;
+  }
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: Montserrat, Helvetica, sans-serif;   
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+    margin: 2em;
+    background: #121314;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  h1 {
+    color: #1ed760; 
+    font-family: Montserrat, Helvetica, sans-serif;   
+    font-size: 250%;
+  }
+  h2, h3 { 
+    color: #444;
+    font-family: Montserrat, Helvetica, sans-serif;   
+    font-weight: lighter;
+  }
+  
+  input {
+    /* right: 15px; */
+    width: 216px;
+    background: #121314;
+    color: #dfe0e6;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #444;
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+    transition: .2s all linear;
+  }
+  
+  input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #1ed760;
+  }
+  
+  
+  ::-webkit-scrollbar { 
+      display: none; 
+  }
+  
+  
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    display: table;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  
+  /* No select text */
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                    not supported by any browser */
+  }
+  
+  /*Font Awesome*/
+  .fa {
+    color: #648f00;
+  }
+   
+  /* items class */
+  .items {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 24em;
+  }
+  .items li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #dfe0e6;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .items li:hover {
+    color: #607D8B;
+    background-color: #dfe0e6;
+    left: .1em;
+  }
+  .items li.selected:hover {
+    background-color: #dfe0e6;
+    color: #dfe0e6;
+  }
+  .items .text {
+    position: relative;
+    top: -3px;
+  }
+  .items {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 24em;
+  }
+  .items li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #dfe0e6;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .items li:hover {
+    color: #607D8B;
+    background-color: #dfe0e6;
+    left: .1em;
+  }
+  .items li.selected {
+    background-color: #CFD8DC;
+    color: white;
+  }
+  
+  .items li.selected:hover {
+    background-color: #BBD8DC;
+  }
+  .items .text {
+    position: relative;
+    top: -3px;
+  }
+  .items .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  #loggedin {
+    display: none; }
+  
+  .btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Montserrat;
+    color: #ffffff;
+    font-size: 20px;
+    background: #1ED760;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #2EBD59;
+    text-decoration: none;
+  }
+  
+  .router-outlet {
+    width: 96%;
+    margin: auto;
+    padding-top: 4%;
+  }
+  

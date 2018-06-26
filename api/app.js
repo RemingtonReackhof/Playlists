@@ -16,7 +16,7 @@ var artists = require('./routes/artists');
 var playlists = require('./routes/playlists');
 var playlist_tracks = require('./routes/playlist-tracks');
 var audio_features = require('./routes/audio-features');
-var top = require('./routes/top');
+var top_artists = require('./routes/top-artists');
 
 var app = express();
 
@@ -94,7 +94,7 @@ app.use('/artists', artists);
 app.use('/playlists', playlists);
 app.use('/playlist-tracks', playlist_tracks);
 app.use('/audio-features', audio_features);
-app.use('/top', top);
+app.use('/top-artists', top_artists);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

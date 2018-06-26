@@ -9,7 +9,7 @@ var checkCreds = function(req, res, next) {
 
 /* GET users listing. */
 router.get('/', [checkCreds], function(req, res, next) {
-  console.log('/top')
+  console.log('/top-artists')
   var items = [],
       sequence = Promise.resolve(),
       hasNextPage = true,
@@ -28,7 +28,6 @@ router.get('/', [checkCreds], function(req, res, next) {
         }
       })
       .then(function(data) {
-        console.log(data.body);
         items = items.concat(data.body.items);
         after = items[items.length - 1].id;
         if (data.body.next === null) {

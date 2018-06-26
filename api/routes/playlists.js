@@ -9,7 +9,7 @@ var checkCreds = function(req, res, next) {
 
 /* GET users listing. */
 router.get('/', checkCreds, function(req, res, next) {
-  var url = 'https://api.spotify.com/v1/me/playlists';
+    var url = 'https://api.spotify.com/v1/me/playlists';
     getPlaylists(req, res, url, 'playlists', next);
   },
   function(req, res) {

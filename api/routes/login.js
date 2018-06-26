@@ -16,12 +16,13 @@ router.get('/', function(req, res, next) {
   var state = generateRandomString(16);
 
   // Set scopes that you need from user to authorize
-  var scopes = ['user-read-private',
-   							'user-read-email',
+  var scopes = ['user-read-email',
+                'user-read-private',          
+                'user-top-read',
    							'user-follow-read',
    							'playlist-read-private',
    							'playlist-read-collaborative'
-   							];
+              ];
 
   // Set spotify authorization URL using API and redirect there
   var authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);

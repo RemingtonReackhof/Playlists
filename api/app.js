@@ -16,11 +16,12 @@ var artists = require('./routes/artists');
 var playlists = require('./routes/playlists');
 var playlist_tracks = require('./routes/playlist-tracks');
 var audio_features = require('./routes/audio-features');
+var top = require('./routes/top');
 
 var app = express();
 
 // Requirements
-var SpotifyWebApi = require('spotify-web-api-node');
+var SpotifyWebApi = require('../spotify-web-api-node');
 async = require('async');
 _ = require('lodash');
 var NodeCache = require('node-cache');
@@ -33,7 +34,6 @@ cacheKeys = {
 request = require('request'); // "Request" library
 
 // Spotify Web API
-var SpotifyWebApi = require('spotify-web-api-node');
 spotifyApi = new SpotifyWebApi({
   clientId: '0d94ee65de4c4b8dbf5283aec28c5542', // Your client id
   clientSecret: '499d8375d88240dfaaa4d25dda970750', // Your secret
@@ -94,6 +94,7 @@ app.use('/artists', artists);
 app.use('/playlists', playlists);
 app.use('/playlist-tracks', playlist_tracks);
 app.use('/audio-features', audio_features);
+app.use('/top', top);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

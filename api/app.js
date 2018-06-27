@@ -21,7 +21,7 @@ var top_artists = require('./routes/top-artists');
 var app = express();
 
 // Requirements
-var SpotifyWebApi = require('../spotify-web-api-node');
+var SpotifyWebApi = require('spotify-web-api-node');
 async = require('async');
 _ = require('lodash');
 var NodeCache = require('node-cache');

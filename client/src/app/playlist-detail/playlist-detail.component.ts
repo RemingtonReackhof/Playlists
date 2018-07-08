@@ -14,7 +14,7 @@ export class PlaylistDetailComponent implements OnInit, OnChanges {
   id: any;
   tracks: any[];
 
-  displayedColumns = ['name', 'artist'];
+  displayedColumns = ['name', 'artist', 'album'];
 
   @ViewChild(MatSort) sort: MatSort;
 

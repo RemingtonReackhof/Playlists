@@ -20,6 +20,12 @@
       <mat-cell *matCellDef="let element"> {{element.artist}} </mat-cell>
     </ng-container>
 
+    <!-- Album Column -->
+    <ng-container matColumnDef="album">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Album </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.albumName}} </mat-cell>
+    </ng-container>
+
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectRow(row)"></mat-row>
   </mat-table>

@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var router = express.Router();
+router = express.Router();
 
 // Routes
 var index = require('./routes/index');
@@ -17,6 +17,7 @@ var playlists = require('./routes/playlists');
 var playlist_tracks = require('./routes/playlist-tracks');
 var audio_features = require('./routes/audio-features');
 var top_artists = require('./routes/top-artists');
+var player = require('./routes/player');
 
 var app = express();
 
@@ -86,6 +87,13 @@ const options = {
 app.use(cors(options));
 router.options("*", cors(options));
 
+var playerRouter = express.Router({mergeParams: true});
+router.use('/player', playerRouter)
+
+playerRouter.route('/get').get(function(req, res){
+  res.status(200).send('hello');
+});
+
 app.use('/', index);
 app.use('/login', login);
 app.use('/callback', callback);
@@ -95,6 +103,7 @@ app.use('/playlists', playlists);
 app.use('/playlist-tracks', playlist_tracks);
 app.use('/audio-features', audio_features);
 app.use('/top-artists', top_artists);
+app.use('/player', router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
